@@ -1,0 +1,44 @@
+@keyframes go_mario
+{
+  0% { background-position: 0 0; transform: scale(1); }
+  100% { background-position: 100% 0; transform: scale(2); }
+}
+@keyframes go_mario_bok
+{
+  0% { background-position: 0 -35px; transform: translateX(0);  }
+  100% { background-position: 100% -35px; transform: translateX(-100px); }
+}
+@keyframes go_mario_bok2
+{
+  0% { background-position: 0 -70px; transform: translateX(0); }
+  100% { background-position: 100% -70px; transform: translateX(100px); }
+}
+@keyframes go_mario_tyl
+{
+  0% { background-position: 0 -105px; transform: scale(1); }
+  100% { background-position: 100% -105px; transform: scale(.5); }
+}
+
+.mario {
+  width:26px;
+  height:35px;  
+  background:url('../img/mario.png') no-repeat;
+  position: absolute;
+  left: 300px; 
+}
+
+.front {
+  animation: go_mario 4000ms steps(8) infinite; 
+}
+
+.left {
+  animation: go_mario_bok 4000ms steps(8) infinite;
+}
+
+.right {
+  animation: go_mario_bok2 4000ms steps(8) infinite;
+}
+
+.back {
+  animation: go_mario_tyl 4000ms steps(8) infinite;
+}
